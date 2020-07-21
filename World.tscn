@@ -6,6 +6,7 @@
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=4]
 
 [node name="World" type="Node2D"]
+position = Vector2( 1, 0 )
 
 [node name="GrassBackground" type="Sprite" parent="."]
 position = Vector2( 171.096, 95.4152 )
