@@ -4,7 +4,10 @@ const ACCELERATION = 500
 const FRICTION = 500
 const MAX_SPEED = 80
 
+var lastDirection = null
 var velocity = Vector2.ZERO
+
+onready var animationPlayer = $AnimationPlayer
 
 func move_by_keyboard():
     var input_vector = Vector2.ZERO
@@ -52,5 +55,17 @@ func _physics_process(delta):
         velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
     else:
         velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+    
+    if velocity.x > 0:
+        $AnimationPlayer.play("RunRight")
+        lastDirection = "right"
+    elif velocity.x < 0:
+        $AnimationPlayer.play("RunLeft")
+        lastDirection = "left"
+    else:
+        if lastDirection == 'left':
+            $AnimationPlayer.play("IdleLeft")
+        else:
+            $AnimationPlayer.play("IdleRight")
     
     velocity = move_and_slide(velocity)
