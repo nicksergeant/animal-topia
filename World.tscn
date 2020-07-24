@@ -8,7 +8,8 @@
 position = Vector2( 1, 0 )
 
 [node name="Jungle" type="Sprite" parent="."]
-position = Vector2( 159, 88 )
+position = Vector2( 159, 119 )
+scale = Vector2( 1, 1.34444 )
 texture = ExtResource( 4 )
 hframes = 2
 
@@ -16,7 +17,7 @@ hframes = 2
 position = Vector2( 167, 144 )
 
 [node name="Bush" parent="." instance=ExtResource( 2 )]
-position = Vector2( 199, 152 )
+position = Vector2( 263, 176 )
 
 [node name="Bush2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 47, 136 )
+position = Vector2( 39, 187.91 )
