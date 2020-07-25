@@ -10,7 +10,7 @@
 position = Vector2( 1, 0 )
 
 [node name="Jungle" type="Sprite" parent="."]
-position = Vector2( 159, 119 )
+position = Vector2( 159, 120 )
 scale = Vector2( 1, 1.34444 )
 texture = ExtResource( 4 )
 hframes = 2
