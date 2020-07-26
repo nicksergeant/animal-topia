@@ -1,14 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/cheetah-face.png" type="Texture" id=3]
 [ext_resource path="res://Scenes.png" type="Texture" id=4]
+[ext_resource path="res://Player/Switch to Cheetah.gd" type="Script" id=5]
+[ext_resource path="res://Player/fox-face.png" type="Texture" id=6]
+[ext_resource path="res://Player/maned-wolf-face.png" type="Texture" id=7]
+[ext_resource path="res://Player/Switch to Fox.gd" type="Script" id=8]
+[ext_resource path="res://Switch to Wolf.gd" type="Script" id=9]
 
 [node name="World" type="YSort"]
 position = Vector2( 1, 0 )
 
 [node name="Jungle" type="Sprite" parent="."]
-position = Vector2( 159, 120 )
+position = Vector2( 159.088, 120 )
 scale = Vector2( 1, 1.34444 )
 texture = ExtResource( 4 )
 hframes = 2
@@ -21,3 +27,23 @@ position = Vector2( 263, 176 )
 
 [node name="Bush2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 39, 187.91 )
+
+[node name="Switch to Cheetah" type="Sprite" parent="."]
+position = Vector2( 249.779, 25.6008 )
+z_index = 1
+texture = ExtResource( 3 )
+script = ExtResource( 5 )
+
+[node name="Switch to Fox" type="Sprite" parent="."]
+position = Vector2( 210.509, 26.2135 )
+scale = Vector2( 1, 1.34444 )
+z_index = 1
+texture = ExtResource( 6 )
+script = ExtResource( 8 )
+
+[node name="Switch to Wolf" type="Sprite" parent="."]
+position = Vector2( 294.001, 28.2061 )
+scale = Vector2( 1, 1.34444 )
+z_index = 1
+texture = ExtResource( 7 )
+script = ExtResource( 9 )
