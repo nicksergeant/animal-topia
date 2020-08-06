@@ -1,6 +1,6 @@
 extends Sprite
 
-onready var playerSprite = get_node("/root/World/Player/CharacterSprite")
+onready var playerSprite = get_node("/root/World/YSort/Player/CharacterSprite")
 
 func _unhandled_input(event):
     if event is InputEventMouseButton and event.pressed and not event.is_echo() and event.button_index == BUTTON_LEFT:
